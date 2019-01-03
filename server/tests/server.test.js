@@ -277,7 +277,7 @@ describe('POST /users/login', () => {
 
                 User.findById(users[1]._id).then((user) => {
                     expect(user.tokens[0]).toInclude({
-                        access: 'x-auth',
+                        access: 'auth',
                         token: res.headers['x-auth']
                     });
                     
